@@ -9,3 +9,9 @@ document.getElementById("btn-linkedin").addEventListener("click", function() {
 document.getElementById("btn-github").addEventListener("click", function() {
     window.open("https://github.com/Nathalia010", "_blank");
 });
+
+function enviarCorreo() {
+    window.location.href = "mailto:k.nathalia.martinez.b@gmail.com";
+};
+
+
