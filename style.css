@@ -15,7 +15,7 @@
     --card-gradient-start: #0F172A;
     --card-gradient-end: #394e6e;
 
-    --shadow-color: rgba(251, 226, 36, 0.566);
+    --shadow-color: rgba(251, 226, 36, 0.902);
 }
 body{
     min-height: 100vh;
