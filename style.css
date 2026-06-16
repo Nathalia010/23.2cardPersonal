@@ -1,3 +1,22 @@
+:root{
+    --white: #FFFFFF;
+    --platinum: #F8FAFC;
+
+    --dark-blue: #504e2c;
+    --steel-blue: #1E293B;
+    --air-force-blue: #FBBF24;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #CBD5E1;
+
+    --accent: #FBBF24;
+    --accent-light: #FEF3C7;
+
+    --card-gradient-start: #0F172A;
+    --card-gradient-end: #394e6e;
+
+    --shadow-color: rgba(251, 226, 36, 0.566);
+}
 body{
     min-height: 100vh;
     display: flex;
@@ -7,17 +26,24 @@ body{
 }
 
 .presentacion-card{
+    background: linear-gradient(
+        135deg,
+        var(--card-gradient-start),
+        var(--card-gradient-end)
+    );
+
     width: 360px;
     height: 550px;
-    background-color: var(--white);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 255, 166, 0.777);
+
+    box-shadow: 0 8px 30px var(--shadow-color);
     transition: 0.3s;
 }
+
 .presentacion-card:hover{
     transform: translateY(-5px);
-}   
+}
 
 .card-header{
     background: linear-gradient(
@@ -25,7 +51,9 @@ body{
         var(--dark-blue),
         var(--air-force-blue)
     );
-    
+
+    color: var(--text-primary);
+
     text-align: center;
     padding: 10px;
     font-size: 1.2rem;
@@ -38,13 +66,13 @@ body{
 }
 
 .card-body h5{
-    color: var(--dark-blue);
+    color: var(--text-primary);
     margin-bottom: 13px;
     font-size: 1.2rem;
 }
 
 .card-body p{
-    color: var(--slate-gray);
+    color: var(--text-secondary);
     line-height: 1.6;
     text-align: justify;
     font-size: 0.9rem;
@@ -52,22 +80,25 @@ body{
 }
 
 .foto-perfil{
-    border: 2px solid rgb(0, 255, 166);
+    border: 2px solid var(--accent);
+
     width: 150px;
     height: 150px;
     border-radius: 100%;
     object-fit: cover;
+
     display: block;
-    margin: 30px auto 30px auto;
+    margin: 30px auto;
 }
+
 .btn-correo{
-    border: 2px solid rgb(0, 255, 166);
-    color: rgb(0, 0, 0);
+    border: 2px solid var(--accent);
+    color: var(--accent);
 }
 
 .btn-correo:hover{
-    background-color: rgb(0, 255, 166);
-    color: white;
+    background-color: var(--accent);
+    color: var(--white);
 }
 
 .tarjeta{
@@ -95,9 +126,6 @@ body{
     transform: rotateY(180deg);
 }
 
-
-
-
 .skills{
     display: flex;
     flex-wrap: wrap;
@@ -107,13 +135,16 @@ body{
 }
 
 .skills span{
-    background-color: #eaf7fb;
+    background-color: var(--accent-light);
     color: var(--dark-blue);
+
     padding: 8px 12px;
     border-radius: 20px;
+
     font-size: 0.85rem;
     font-weight: 600;
-    border: 1px solid #cdeaf5;
+
+    border: 1px solid var(--accent);
 }
 
 .fortalezas{
@@ -123,7 +154,7 @@ body{
 
 .fortalezas li{
     margin: 8px 0;
-    color: var(--slate-gray);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
